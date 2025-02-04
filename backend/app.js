@@ -5,6 +5,7 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
+
 const port = process.env.PORT || 3001;
 
 app.use(cors());
@@ -102,7 +103,7 @@ db.sequelize.sync().then(()=> {
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
     //fetchDataAndInsert();
-    fetchDataAndInsertNew();
+    //fetchDataAndInsertNew();
 
   });
 });
