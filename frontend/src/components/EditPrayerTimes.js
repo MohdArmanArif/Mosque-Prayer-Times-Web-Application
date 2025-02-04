@@ -13,7 +13,7 @@ function EditPrayerTimes() {
   useEffect(() => {
     const fetchPrayerTimes = async () => {
       try {
-        const response = await axios.get('https://dawahcentre.click/prayerTimes');
+        const response = await axios.get('https://mosque-prayer-times-web-application.onrender.com/prayerTimes/');
         setPrayerTimes(response.data);
         setFilteredPrayerTimes(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ function EditPrayerTimes() {
     const updatedPrayerTime = filteredPrayerTimes.find(pt => pt.id === id);
     console.log('Updating prayer time:', updatedPrayerTime);
     try {
-      const response = await axios.put(`https://dawahcentre.click/prayerTimes/${updatedPrayerTime.date}`, updatedPrayerTime);
+      const response = await axios.put(`https://mosque-prayer-times-web-application.onrender.com/prayerTimes/${updatedPrayerTime.date}`, updatedPrayerTime);
       setMessage('Prayer time updated successfully.');
       console.log('Prayer time updated:', response.data);
     } catch (error) {

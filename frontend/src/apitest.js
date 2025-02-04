@@ -21,7 +21,7 @@ let formattedDate = null;
     console.log(formattedDate);
 
     try {
-      const response = await fetch(`https://dawahcentre.click/prayerTimes/${formattedDate}`);
+      const response = await fetch(`https://mosque-prayer-times-web-application.onrender.com/prayerTimes/${formattedDate}`);
       const data = await response.json();
       if (!data) break;
 
@@ -40,7 +40,6 @@ const Maghrib = data.Maghrib;
           nextChangeDate = formatDate(currentDate);
           changedTime = { Fajr, Zuhr, Asr, Isha, Maghrib, nextChangeDate };
           return data;
-          break;
         }
       }
 

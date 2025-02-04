@@ -66,10 +66,10 @@ const InsertYear = async (year) => {
         const timingswithDate = { date, weekday, FajrStart, Fajr, ZuhrStart, Zuhr, AsrStart, Asr, Maghrib, IshaStart, Isha };
 
         try {
-          const existingTiming = await axios.get(`https://dawahcentre.click/prayerTimes/${date}`);
+          const existingTiming = await axios.get(`https://mosque-prayer-times-web-application.onrender.com/prayerTimes//${date}`);
           if (!existingTiming.data) {
             // Insert a new record
-            await axios.post('https://dawahcentre.click/prayerTimes', timingswithDate);
+            await axios.post('https://mosque-prayer-times-web-application.onrender.com/prayerTimes/', timingswithDate);
             console.log('Data successfully inserted into the database');
           }
         } catch (error) {
