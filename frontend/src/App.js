@@ -14,20 +14,19 @@ function App() {
       const data = await fetchPrayerTimes();
       setPrayerTimes(data);
     };
-    fetchPrayerData();
-    const intervalId = setInterval(fetchPrayerData, 10 * 10 * 1000);
-    return () => clearInterval(intervalId);
-  }, []);
-
-  useEffect(() => {
     const fetchChangedTime = async () => {
       const data = await fetchPrayerTimess();
       setChangedTime(data);
     };
+    fetchPrayerData();
     fetchChangedTime();
-    const intervalId = setInterval(fetchChangedTime, 10 * 10 * 1000);
+    const intervalId = setInterval(() => {
+      fetchPrayerData();
+      fetchChangedTime();
+    }, 10 * 10 * 1000);
     return () => clearInterval(intervalId);
   }, []);
+
   console.log(prayerTimes);
   console.log(changedTime);
 
