@@ -73,13 +73,13 @@ module.exports={
         console.log(Number(min));
         var calculatetime = "";
     
-        if(min >= 15)
+        if(min >= 30)
             {
-                min = min -15;
+                min = min -30;
                 hour +=1;
             }
             else{
-                min = min + 45;
+                min = min + 30;
             
             }
         var reminder = min  % 15;
@@ -130,17 +130,20 @@ module.exports={
         var time = timeest.split(' ')[0];
         var hour = Number(time.split(':')[0]);
         var min = Number(time.split(':')[1]);
-       if(hour == 13)
+       if(hour == 12 && min > 20)
         {
-            return this.convertFormat(13, 45);
+            return this.convertFormat(13, 0);
         }
-    else if(hour == 12 && min < 45)
+        else if(hour == 12 && min <= 20)
         {
             return this.convertFormat(12, 45);
-                
+        }
+        else if(hour == 13 && min <= 20)
+        {
+            return this.convertFormat(13, 45);
         }
         else{
-            return this.convertFormat(13, 45);
+            return this.convertFormat(14, 0);
         }
 },
 calculateMaghrib: function (timeest)
