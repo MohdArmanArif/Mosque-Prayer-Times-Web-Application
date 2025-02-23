@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   const [prayerTimes, setPrayerTimes] = useState([]);
   const [changedTime, setChangedTime] = useState([]);
+  const [wakeLock, setWakeLock] = useState(null);
 
   useEffect(() => {
     const fetchPrayerData = async () => {
@@ -26,6 +27,32 @@ function App() {
     }, 10 * 10 * 1000);
     return () => clearInterval(intervalId);
   }, []);
+  useEffect(() => {
+    const requestWakeLock = async () => {
+      try {
+        const wakeLock = await navigator.wakeLock.request('screen');
+        setWakeLock(wakeLock);
+        wakeLock.addEventListener('release', () => {
+          console.log('Screen Wake Lock released:', wakeLock.released);
+        });
+        console.log('Screen Wake Lock acquired:', wakeLock.released);
+      } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+      }
+    };
+
+    if ('wakeLock' in navigator) {
+      requestWakeLock();
+    }
+
+    return () => {
+      if (wakeLock !== null) {
+        wakeLock.release().then(() => {
+          setWakeLock(null);
+        });
+      }
+    };
+  }, [wakeLock]);
 
   console.log(prayerTimes);
   console.log(changedTime);
