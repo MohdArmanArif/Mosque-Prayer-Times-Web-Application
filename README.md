@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Mosque Prayer Times Application
+Welcome to the Mosque Prayer Times Application, a customizable web app designed to help mosques display accurate prayer times. This app allows users to calculate and manage prayer schedules based on different calculation methods and local time adjustments, ensuring that the congregation is always informed of the correct times for each prayer.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Customizable Prayer Times Calculation
+Time Adjustments: Adjust prayer times for local or seasonal changes.
+Next Prayer Display: Automatically highlights the next upcoming prayer.
+User-Friendly Interface: Easy-to-navigate layout designed for both desktop and mobile devices.
+Hosted Web App: The app is hosted and accessible at Dawah Centre.
+Getting Started
+Prerequisites
+To run the project locally, you will need to have:
 
-## Available Scripts
+Node.js
+Express
+React.js
+MySQL or MongoDB (whichever you're using for your database)
+API for mosque prayer times calculations (such as Aladhan API)
+Installation
+Clone the repository:
+bash
+Copy
+Edit
+git clone https://github.com/your-username/mosque-prayer-times-app.git
+cd mosque-prayer-times-app
+Install dependencies:
+bash
+Copy
+Edit
+npm install
+Configure environment variables:
+Create a .env file in the root directory and configure your API keys, database credentials, and other environment settings.
 
-In the project directory, you can run:
+Run the app:
+bash
+Copy
+Edit
+npm start
+The application should now be running on http://localhost:3000.
 
-### `npm start`
+Deployment
+You can deploy the application to any hosting service that supports Node.js (e.g., Vercel, Heroku). Ensure that your backend is connected to the database and accessible from the frontend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Customization
+Each mosque can customize its prayer time settings through the admin interface, accessible by logging in with a mosque account. Admins can:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Edit and adjust prayer time calculation methods.
+Set reminders for prayer announcements.
+Add or remove special mosque events on the main display.
+Usage
+To access the app, visit the official website at Dawah Centre. The app is designed to be simple and accessible, making it easy for users to quickly find their mosque's prayer times.
 
-### `npm test`
+Contributing
+We welcome contributions from the community! If you'd like to contribute, please:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Fork the repository.
+Create a feature branch (git checkout -b feature/new-feature).
+Commit your changes (git commit -m 'Add new feature').
+Push the branch (git push origin feature/new-feature).
+Open a Pull Request.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact
+For questions, suggestions, or feedback, please contact us at rahmansaydur511@gmail.com.
