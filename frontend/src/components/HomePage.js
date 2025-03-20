@@ -29,7 +29,7 @@ function HomePage({ prayerTimes, changedprayer }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowJummah(prevShowJummah => !prevShowJummah);
-    }, 5000); // Switch every 5 seconds
+    }, 10000); // Switch every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -86,7 +86,7 @@ function HomePage({ prayerTimes, changedprayer }) {
 
   </table>
   <br></br>
-  <table id="prayerTimesTable">
+  {/* <table id="prayerTimesTable">
           <thead>
             <tr>
               <th>Jumu'ah Prayers</th>
@@ -101,8 +101,8 @@ function HomePage({ prayerTimes, changedprayer }) {
               <td>2:00 pm</td>
             </tr>
           </tbody>
-        </table>
-  {/* {showJummah ? (
+        </table> */}
+   {showJummah ? (
         <table id="prayerTimesTable">
           <thead>
             <tr>
@@ -114,8 +114,8 @@ function HomePage({ prayerTimes, changedprayer }) {
           <tbody>
             <tr>
               <td id="prayerName">Khutbah</td>
-              <td>12:15 pm</td>
-              <td>1:15 pm</td>
+              <td>1:00 pm</td>
+              <td>2:00 pm</td>
             </tr>
           </tbody>
         </table>
@@ -131,12 +131,12 @@ function HomePage({ prayerTimes, changedprayer }) {
           <tbody>
             <tr>
               <td id="prayerName">Khutbah</td>
-              <td>12:15 pm</td>
-              <td>1:15 pm</td>
+              <td>9:00 am</td>
+              <td>10:30 am</td>
             </tr>
           </tbody>
         </table>
-      )} */}
+      )} 
  
     </div>
   );
