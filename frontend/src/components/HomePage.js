@@ -86,7 +86,7 @@ function HomePage({ prayerTimes, changedprayer }) {
 
   </table>
   <br></br>
-  { <table id="prayerTimesTable">
+  {/* { <table id="prayerTimesTable">
           <thead>
             <tr>
               <th>Jumu'ah Prayers</th>
@@ -101,8 +101,8 @@ function HomePage({ prayerTimes, changedprayer }) {
               <td>2:00 pm</td>
             </tr>
           </tbody>
-        </table> }
-   {/* {showJummah ? (
+        </table> } */}
+    {showJummah ? (
         <table id="prayerTimesTable">
           <thead>
             <tr>
@@ -130,13 +130,13 @@ function HomePage({ prayerTimes, changedprayer }) {
           </thead>
           <tbody>
             <tr>
-              <td id="prayerName">Khutbah</td>
-              <td>9:00 am</td>
-              <td>10:30 am</td>
+              <td id="prayerName">Salah</td>
+              <td>8:00 am</td>
+              <td>10:00 am</td>
             </tr>
           </tbody>
         </table>
-      )}  */}
+      )}  
  
     </div>
   );
